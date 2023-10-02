@@ -1,6 +1,6 @@
 from django.db import models
-from HMS.Patient.models import Patient
-from HMS.Doctor.models import Doctor
+from Patient.models import Patient
+from Doctor.models import Doctor
 # Create your models here.
 class Diagnosis(models.Model):
     diagnosisID = models.AutoField(primary_key=True)
