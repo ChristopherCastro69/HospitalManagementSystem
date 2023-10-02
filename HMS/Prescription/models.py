@@ -1,4 +1,6 @@
 from django.db import models
+from HMS.Patient.models import Patient
+from HMS.Doctor.models import Doctor
 
 # Create your models here.
 class Prescription(models.Model):
@@ -8,5 +10,5 @@ class Prescription(models.Model):
     frequency = models.FloatField()
     startDate = models.DateField()
     endDate = models.DateField()
-    
-
+    patientID = models.ForeignKey(Patient, on_delete=models.CASCADE)
+    doctorID = models.ForeignKey(Doctor, on_delete=models.CASCADE)
